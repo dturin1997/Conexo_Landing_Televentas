@@ -38,21 +38,130 @@ body {
 .banner {
   margin: 0 auto;
 }
+.banner_content {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 !important;
+  /* width: 29.5rem; */
+}
 .banner_img {
-    margin: 0 0 0 0;
-    padding: 0 !important;
+  margin: 0 auto;
+  padding: 0 !important;
+  margin-bottom: 1rem;
 }
 .banner_img img {
-    margin-left: 0;
-  width: 29.5rem;
+  border-radius: 1rem;
+  margin-left: 0;
+  width: 29.4rem;
 }
 .banner_text {
- margin: 0 auto;
- padding: 1rem;
- width: 30rem;
- background-color: whitesmoke;
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 29.5rem;
+  background-color: whitesmoke;
+}
+.banner_text span {
+  font-weight: bold;
+}
+/*-- Formulario General --*/
+.politica_label {
+    margin-left: 1rem;
+}
+.formulario_general {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.formulario_general h1 {
+  font-weight: bold;
+  color: #b42323;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+form input {
+  height: 3.4rem;
+}
+.error_container {
+  font-size: 1.6rem;
+  position: relative;
+  /*
+    border: 1px solid red;
+    top: -45px;
+    */
+  /*
+    height: 3.4rem;
+    */
+}
+.error_icon {
+  position: absolute;
+  top: -3.7rem;
+  right: 1rem;
+  color: red;
+}
+.error {
+  position: relative;
+  color: red;
+  font-style: italic;
+  text-align: right;
+  font-size: 1.2rem;
+  /*
+    top: 45px;
+    */
 }
 /*------------ >375px ------------*/
-@media only screen and (min-width:375px){
-
+@media only screen and (min-width: 376px) {
+}
+/*------------ >750px ------------*/
+@media only screen and (min-width: 750px) {
+  .titulos {
+    margin: 0 auto;
+    max-width: 60rem !important;
+  }
+  .banner_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 60rem !important;
+  }
+  .banner_img {
+    margin: 1rem;
+  }
+  .banner_text {
+    margin: 1rem;
+  }
+  /* .banner_content {
+    max-width: 60rem;
+  } */
+}
+/*------------ >1160px ------------*/
+@media only screen and (min-width: 1160px) {
+  .titulos {
+    margin: 0 auto;
+    max-width: 110rem !important;
+  }
+  .banner_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 110rem !important;
+  }
+  .banner_img {
+    margin: 1rem;
+    /* vertical-align: middle; */
+  }
+  .banner_img img {
+    width: 60rem;
+  }
+  .banner_text {
+    display: flex;
+    flex-direction: column;
+    /* Me sirvió para centrar verticalmente*/
+    justify-content: center;
+    font-size: 2rem;
+    margin: 1rem 0 1rem 1rem;
+    width: 45rem;
+  }
 }

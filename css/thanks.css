@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+/* Bootstrap reemplaza el font family*/
+body {
+    font-size: 1.6rem;
+    height: 100%;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Edu NSW ACT Foundation', cursive !important;
+}
+.gradient {
+    background: rgb(180,35,35);
+    background: linear-gradient(90deg, rgba(180,35,35,1) 0%, rgba(24,40,47,1) 100%);
+}
+.icon {
+    font-size: 8rem;
+    color: rgb(180,35,35);
+}
+.icon:hover {
+    font-size: 8rem;
+    color: green;
+    cursor: pointer;
+}
+.footer_text{
+    position:absolute;
+    bottom:0;
+    display: flex;
+    justify-content:center;
+    color: white;
+    font-size: 2.2rem;
+}

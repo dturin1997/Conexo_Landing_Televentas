@@ -7,6 +7,8 @@
     <title>Televentas</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/998eab3163.js" crossorigin="anonymous"></script> 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <!-- Header -->
@@ -29,18 +31,132 @@
                     <span>Llámenos para una atención personalizada!</span>
                     <span>756 - 4356</span>
                 </div>
-                <div class="banner_img">
-                    <img class="" src="./img/banner_1.jpg" alt="">
-                </div>
-                <div class="banner_text">
-                    <span>Conexo</span>
-                    <p>ofrece lo último en servicios de televentas y soluciones personalizadas para tu negocio.</p>
-                    <p>Estamos aquí para servirte las 24 horas del día para que tu negocio nunca se pierda una llamada importante</p>
+                <div class="banner_content">
+                    <div class="banner_img">
+                        <img class="" src="./img/banner_1.jpg" alt="">
+                    </div>
+                    <div class="banner_text">
+                        <span>Conexo</span>
+                        <p>Ofrece lo último en servicios de televentas y soluciones personalizadas para tu negocio.</p>
+                        <p>Estamos aquí para servirte las 24 horas del día para que tu negocio nunca se pierda una llamada importante</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Banner -->
+
+    <!-- Formulario General -->
+
+    <section class="formulario_general py-5" id="formulario_general">
+		<div class="container">
+            <div class="row pt-5 align-items-center">
+                <h1 class="text-center">Formulario General</h1>
+                <div class="col-md-6">
+                    <img src="img/handshake.svg" alt="Contact image">
+                </div>
+                <div class="col-md-6">
+                    <form id="formulario_general" class="pt-3 px-5" method="GET" action="./thanks.html">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="InputNombres" class="form-label">Nombres</label>
+                                    <input type="text" class="prueba form-control fs-3" id="InputNombres" placeholder="Nombre*" name="InputNombres">
+                                </div>
+                                <div id="nombresError" class="error_container">
+                                <!--    
+                                    <i class="fa-solid fa-circle-exclamation error_icon"></i>
+                                    <p class="error">Los Nombres no pueden estar vacíos</p>
+                                -->        
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="InputEmail" class="form-label">Correo</label>
+                                    <input type="email" class="form-control fs-3" id="InputEmail" placeholder="Correo*" name="InputEmail">
+                                </div>
+                                <div id="emailError" class="error_container">
+                                          
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="InputTelefono" class="form-label">Telefono</label>
+                                    <input type="number" class="form-control fs-3" id="InputTelefono" placeholder="Telefono*" name="InputTelefono">
+                                </div>
+                                <div id="telefonoError" class="error_container">
+                                          
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="InputEmpresa" class="form-label">Empresa</label>
+                                    <input type="text" class="form-control fs-3" id="InputEmpresa" placeholder="Empresa*" name="InputEmpresa">
+                                </div>
+                                <div id="empresaError" class="error_container">
+                                          
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="InputPais" class="form-label">Pais</label>
+                                    <input type="text" class="form-control fs-3" id="InputPais" placeholder="Pais*" name="InputPais">
+                                </div>
+                                <div id="paisError" class="error_container">
+                                          
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="InputSector" class="form-label">Sector/Industria</label>
+                                    <input type="text" class="form-control fs-3" id="InputSector" placeholder="InputSector*" name="InputSector">
+                                </div>
+                                <div id="sectorError" class="error_container">
+                                          
+                                </div>  
+                            </div>
+                            <div class="col-md-12 d-flex align-items-center">
+                                <input type="checkbox" id="cbox1" value="primer_checkbox"> <label for="cbox1" class="politica_label fs-5">Aceptas nuestra politica de privacidad</label>
+                                <div id="sectorError" class="error_container">
+                                          
+                                </div> 
+                            </div>
+                            <div class="col-md-12 g-recaptcha" data-sitekey="6LfMuyIhAAAAAN5vmcMCZhjijQZgp2HpIJYvPPMe"></div>
+                            <div id="grecaptchaError" class="error_container">
+                                          
+                            </div> 
+                            <!--
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="InputAsunto" class="form-label">Asunto</label>
+                                    <input type="text" class="form-control fs-3" id="InputAsunto" placeholder="Asunto*">
+                                </div>
+                                <div id="asuntoError" class="error_container">
+                                          
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="Textarea2">Mensaje</label>
+                                    <textarea class="form-control fs-3" placeholder="Describe lo que necesitas." id="Textarea2" style="height: 100px"></textarea>
+                                </div>
+                                <div id="textarea2Error" class="error_container">
+                                          
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                        
+                        
+                        <button id="button3" type="submit" class="btn btn-danger mt-3 fs-2">Enviar</button>
+                      </form>
+                </div>              
+            </div>
+          </div>
+	</section>
+
+    <!-- Formulario General -->
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
