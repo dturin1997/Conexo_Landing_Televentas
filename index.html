@@ -45,7 +45,97 @@
         </div>
     </section>
     <!-- Banner -->
-
+    <!-- Texto con iconos -->
+    <section>
+        <div class="container my-5">
+            <div class="row text-center">
+                <div class="col-md-12 my-5">
+                    <button class="btn btn-danger mb-5 fs-2"><a class="cta_formulario_general" href="#formulario_general">Solicitar Demo</a></button>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon gradient mb-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-layers"
+                        >
+                          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                          <polyline points="2 17 12 22 22 17"></polyline>
+                          <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="text_icons">
+                        <h3>Built for developers</h3>
+                          <p>
+                            Our customizable, block-based build system makes creating your
+                            next project fast and easy!
+                          </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon gradient mb-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-smartphone"
+                        >
+                          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                          <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                      </div>
+                      <div class="text_icons">
+                        <h3>Modern responsive design</h3>
+                        <p class="mb-0">
+                            Featuring carefully crafted, mobile-first components, your end
+                            product will function beautifully on any device!
+                        </p>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon gradient mb-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="feather feather-code"
+                        >
+                          <polyline points="16 18 22 12 16 6"></polyline>
+                          <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                      </div>
+                      <div class="text_icons">
+                        <h3>Complete documentation</h3>
+                        <p class="mb-0">
+                            All of the layouts, page sections, components, and utilities are
+                            fully covered in this products docs.
+                        </p>
+                      </div>
+                      
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Texto con iconos -->
     <!-- Formulario General -->
 
     <section class="formulario_general py-5" id="formulario_general">
@@ -64,10 +154,7 @@
                                     <input type="text" class="prueba form-control fs-3" id="InputNombres" placeholder="Nombre*" name="InputNombres">
                                 </div>
                                 <div id="nombresError" class="error_container">
-                                <!--    
-                                    <i class="fa-solid fa-circle-exclamation error_icon"></i>
-                                    <p class="error">Los Nombres no pueden estar vacíos</p>
-                                -->        
+              
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -115,9 +202,12 @@
                                           
                                 </div>  
                             </div>
-                            <div class="col-md-12 d-flex align-items-center">
-                                <input type="checkbox" id="cbox1" value="primer_checkbox"> <label for="cbox1" class="politica_label fs-5">Aceptas nuestra politica de privacidad</label>
-                                <div id="sectorError" class="error_container">
+                            <div class="col-md-12">
+                                <div class="mb-3 d-flex align-items-center">
+                                    <input type="checkbox" id="checkBox1" value="" name="checkBox1"> 
+                                    <label for="cbox1" class="politica_label fs-5">Aceptas nuestra politica de privacidad</label>
+                                </div>
+                                <div id="checkError" class="error_container">
                                           
                                 </div> 
                             </div>
@@ -125,27 +215,9 @@
                             <div id="grecaptchaError" class="error_container">
                                           
                             </div> 
-                            <!--
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label for="InputAsunto" class="form-label">Asunto</label>
-                                    <input type="text" class="form-control fs-3" id="InputAsunto" placeholder="Asunto*">
-                                </div>
-                                <div id="asuntoError" class="error_container">
-                                          
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label for="Textarea2">Mensaje</label>
-                                    <textarea class="form-control fs-3" placeholder="Describe lo que necesitas." id="Textarea2" style="height: 100px"></textarea>
-                                </div>
-                                <div id="textarea2Error" class="error_container">
-                                          
-                                </div>
-                            </div>
-                            -->
+                            
                         </div>
+                        
                         
                         
                         <button id="button3" type="submit" class="btn btn-danger mt-3 fs-2">Enviar</button>
@@ -156,7 +228,7 @@
 	</section>
 
     <!-- Formulario General -->
-    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 </html>

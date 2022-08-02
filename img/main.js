@@ -4,6 +4,10 @@ const telefono = document.querySelector('#InputTelefono');
 const empresa = document.querySelector('#InputEmpresa');
 const pais = document.querySelector('#InputPais');
 const sector = document.querySelector('#InputSector');
+const cb = document.querySelector('#checkBox1');
+console.log('Aqui 1')
+//console.log(checkBox.checked)
+
 //const grecaptcha = document.querySelector('#grecaptcha');
 //const asunto = document.querySelector('#InputAsunto');
 //const textarea2 = document.querySelector('#Textarea2');
@@ -16,12 +20,15 @@ const empresaError = document.querySelector('#empresaError');
 const paisError = document.querySelector('#paisError');
 const sectorError = document.querySelector('#sectorError');
 const grecaptchaError = document.querySelector('#grecaptchaError');
+const checkError = document.querySelector('#checkError');
 //const asuntoError = document.querySelector('#asuntoError');
 //const textarea2Error = document.querySelector('#textarea2Error');
 
 const button = document.querySelector('#button3');
 
 button.addEventListener('click',(event)=>{
+    event.preventDefault();
+    console.log(cb.checked);
     //event.preventDefault();
     //console.log(event);
     validateEmpty(names.value, names, namesError, "Los nombres no pueden estar vacíos", event);
@@ -33,6 +40,8 @@ button.addEventListener('click',(event)=>{
     validateEmpty(empresa.value, empresa, empresaError, "EL nombre de la empresa no puede estar vacío", event);
     validateEmpty(pais.value, pais, paisError, "EL nombre del pais no puede estar vacío", event);
     validateEmpty(sector.value, sector, sectorError, "EL nombre del sector no puede estar vacío", event);
+    //validateCheckBox(checkBox, checkError, "Debe aceptar nuestra politica", event);
+    validateCheckBox(checkBox, event);
     //validateEmpty(asunto.value, asunto, asuntoError, "EL asunto no puede estar vacío", event);
     //validateEmpty(textarea2.value, textarea2, textarea2Error, "Debe escribir un mensaje", event);
 
@@ -54,6 +63,16 @@ button.addEventListener('click',(event)=>{
     }
     */
 });
+function validateCheckBox(checkBox, event){
+    event.preventDefault();
+    console.log('Entre')
+    console.log(checkBox.checked)
+    if(!checkBox.checked)
+    {
+        alert('You must agree to the terms first.');
+        return false;
+    }
+}
 
 function validateRecaptcha(grecaptcha, grecaptchaError, mensajeError){
     if(grecaptcha && grecaptcha.getResponse().length > 0)
@@ -82,6 +101,9 @@ function validateEmail(valueInput, divInput, divError, mensajeError, event){
         hideError(divInput, divError);
     }else{
         event.preventDefault();
+
+        //console.log(checkBox.checked)
+
         showError(divInput, divError, mensajeError);
     }
 }

@@ -4,6 +4,7 @@ const telefono = document.querySelector('#InputTelefono');
 const empresa = document.querySelector('#InputEmpresa');
 const pais = document.querySelector('#InputPais');
 const sector = document.querySelector('#InputSector');
+const checkBox = document.querySelector('#checkBox1');
 //const grecaptcha = document.querySelector('#grecaptcha');
 //const asunto = document.querySelector('#InputAsunto');
 //const textarea2 = document.querySelector('#Textarea2');
@@ -16,6 +17,7 @@ const empresaError = document.querySelector('#empresaError');
 const paisError = document.querySelector('#paisError');
 const sectorError = document.querySelector('#sectorError');
 const grecaptchaError = document.querySelector('#grecaptchaError');
+const checkError = document.querySelector('#checkError');
 //const asuntoError = document.querySelector('#asuntoError');
 //const textarea2Error = document.querySelector('#textarea2Error');
 
@@ -36,6 +38,7 @@ button.addEventListener('click',(event)=>{
     //validateEmpty(asunto.value, asunto, asuntoError, "EL asunto no puede estar vacío", event);
     //validateEmpty(textarea2.value, textarea2, textarea2Error, "Debe escribir un mensaje", event);
 
+    validateCheckBox(checkBox, checkError, "Tiene que aceptar nuestra politica de privacidad", event);
     validateRecaptcha(grecaptcha, grecaptchaError,"Tiene que marcar el recaptcha!")
     /*
     if(grecaptcha && grecaptcha.getResponse().length > 0)
@@ -54,6 +57,21 @@ button.addEventListener('click',(event)=>{
     }
     */
 });
+
+function validateCheckBox(checkBox, checkError, mensajeError, event){
+    //event.preventDefault();
+    //console.log('Entre')
+    //console.log(checkBox.checked)
+    if(!checkBox.checked)
+    {
+        event.preventDefault();
+        //alert('You must agree to the terms first.');
+        showErrorCheckBox(checkError,mensajeError)
+        //return false;
+    }else{
+        hideErrorCheckBox(checkError)
+    }
+}
 
 function validateRecaptcha(grecaptcha, grecaptchaError, mensajeError){
     if(grecaptcha && grecaptcha.getResponse().length > 0)
@@ -112,5 +130,13 @@ function showErrorCaptcha(divError, mensajeError){
 }
 
 function hideErrorCaptcha(divError){
+    divError.innerHTML = ``;
+}
+
+function showErrorCheckBox(divError, mensajeError){
+    divError.innerHTML = `<p class="error">${mensajeError}</p>`;
+}
+
+function hideErrorCheckBox(divError){
     divError.innerHTML = ``;
 }

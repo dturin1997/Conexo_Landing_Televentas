@@ -55,6 +55,7 @@ body {
   width: 29.4rem;
 }
 .banner_text {
+  font-size: 1.6rem;
   border-radius: 1rem;
   margin: 0 auto;
   padding: 1rem;
@@ -63,6 +64,30 @@ body {
 }
 .banner_text span {
   font-weight: bold;
+  color: #B42323;
+  /* color: #2224be; */
+}
+/*-- Texto con iconos --*/
+.icon {
+  color: #fff;
+  height: 5rem;
+  width: 5rem;
+  font-size: 1.75rem;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.text_icons {
+  font-size: 2.2rem;
+}
+/*-- CTA Boton --*/
+.cta_formulario_general {
+  text-decoration: none;
+  color: white;
+}
+.cta_formulario_general:hover {
+  color: white;
 }
 /*-- Formulario General --*/
 .politica_label {
@@ -115,6 +140,7 @@ form input {
 @media only screen and (min-width: 376px) {
 }
 /*------------ >750px ------------*/
+/*
 @media only screen and (min-width: 750px) {
   .titulos {
     margin: 0 auto;
@@ -132,10 +158,11 @@ form input {
   .banner_text {
     margin: 1rem;
   }
-  /* .banner_content {
+  .banner_content {
     max-width: 60rem;
-  } */
+  }
 }
+*/
 /*------------ >1160px ------------*/
 @media only screen and (min-width: 1160px) {
   .titulos {
@@ -158,7 +185,8 @@ form input {
   .banner_text {
     display: flex;
     flex-direction: column;
-    /* Me sirvió para centrar verticalmente*/
+    /* Me sirvió para centrar verticalmente
+    ya que el eje es principal es vertical*/
     justify-content: center;
     font-size: 2rem;
     margin: 1rem 0 1rem 1rem;
